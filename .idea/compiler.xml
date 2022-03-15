@@ -7,7 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="textdemo" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Dushijie-week3" target="1.8" />
+      <module name="Dushijie." target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
