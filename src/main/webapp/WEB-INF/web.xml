@@ -4,4 +4,64 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc.sqlserver://localhost:1433;database=keshe;encrypt=false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>admin123456</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>homework.work_three.Register</servlet-class>
+    </servlet>
+
+    <!--><servlet>
+        <servlet-name>life</servlet-name>
+        <servlet-class>homework.work_three.life</servlet-class>
+    </servlet>-->
+    <!-- <servlet>
+        <servlet-name>JDBCServlet</servlet-name>
+        <servlet-class>homework.work_four.JDBCServlet</servlet-class>
+       <init-param>
+            <param-name>driver</param-name>
+            <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc.sqlserver://localhost:1433;database=keshe;encrypt=false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>sa</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>admin123456</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>-->
+    <!--<servlet-mapping>
+        <servlet-name>JDBCServlet</servlet-name>
+        <url-pattern>jdbc</url-pattern>
+    </servlet-mapping>-->
+    <!--<servlet-mapping>
+        <servlet-name>life</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>>
 </web-app>

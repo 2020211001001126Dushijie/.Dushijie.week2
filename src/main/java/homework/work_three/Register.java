@@ -1,4 +1,4 @@
-package Dushijie.week3;
+package homework.work_three;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -6,7 +6,7 @@
     <!--automatic code-->
     <servlet>
         <servlet-name>Register</servlet-name>
-        <servlet-class>Dushijie.week3.Register</servlet-class>
+        <servlet-class>homework.work_three.Register</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Register</servlet-name>
