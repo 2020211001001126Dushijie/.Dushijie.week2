@@ -14,7 +14,7 @@
 </head>
 <body>
     <div>
-        <form action="" method="GET">
+        <form action="/weektwo" method="GET" >
             Username: <input type="text" name="name">
             <br />
             Password: <input type="text" name="password" />
@@ -24,7 +24,7 @@
             Data of birth: <input type="text" name="" />
 
         </form>
-        <form method="post" action="">
+        <form method="post" action="/weektwo">
             <input type="radio" name="sex" <c:if test="${param.sex== '男'}""</c:if>>男
             <input type="radio" name="sex" <c:if test="${param.sex== '女'}""</c:if>>女
         </form>
