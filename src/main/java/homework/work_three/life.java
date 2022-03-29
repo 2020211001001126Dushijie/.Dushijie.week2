@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-@WebServlet("/life")
+//@WebServlet("/life")
 
 public class life extends HttpServlet {
     Connection con=null;
