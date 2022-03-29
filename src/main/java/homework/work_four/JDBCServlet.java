@@ -19,7 +19,7 @@ import java.sql.SQLException;
         },
         loadOnStartup = 1
 )*/
-@WebServlet(urlPatterns={"/jdbc"},loadOnstartup=1);
+//@WebServlet(urlPatterns={"/jdbc"},loadOnstartup=1);
 public class JDBCServlet extends HttpServlet {
 
     Connection con=null;
