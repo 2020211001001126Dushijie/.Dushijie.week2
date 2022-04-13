@@ -1,5 +1,7 @@
 package homework.work_five;
 
+import homework.dao.Userdao;
+import homework.modle.User;
 import jakarta.servlet.annotation.WebServlet;
 
 import javax.servlet.ServletException;
@@ -12,6 +14,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 @WebServlet(name = "LoginServlet", value = "/login")
 public class login extends HttpServlet{
 
@@ -36,17 +39,37 @@ public class login extends HttpServlet{
             e.printStackTrace();
         }*/
         }
+        @Override
+        protected void doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
+            //login-request is get
+            request.getRequestDispatcher("WEB-INF/login.jsp").forward(request,response);
+        }
 
         @Override
         protected void doPost(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
+            PrintWriter out = response.getWriter();
             String username = request.getParameter("username");
             String password = request.getParameter("password");
 
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
+            Userdao userDao=new Userdao();
+            try {
+               User user=userDao.findByUsernamePassword(conn,username,password);
+               if(user!=null){
+                   request.setAttribute("user",user);
+                    request.getRequestDispatcher("WEB-INF/views/userinfor.jsp").forward(request,response);
+               }else{
+                   request.setAttribute("message","Username or Password Error!!!");
+                   request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
+               }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
 
-            String sql = "Select * from usertable where username = ? and password = ?";
+            //response.setContentType("text/html;charset=UTF-8");
+
+
+            /*String sql = "Select * from usertable where username = ? and password = ?";
             try {
                 ps = conn.prepareStatement(sql);
                 ps.setString(1, username);
@@ -69,6 +92,6 @@ public class login extends HttpServlet{
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
+            }*/
         }
 }

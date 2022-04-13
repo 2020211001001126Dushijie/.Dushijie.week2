@@ -59,8 +59,13 @@
         <servlet-name>life</servlet-name>
         <url-pattern>/life</url-pattern>
     </servlet-mapping>-->
-    <servlet-mapping>
+        <welcome-file-list>
+        <welcome-file>home</welcome-file>
+        </welcome-file-list>
+
+        <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/register</url-pattern>
     </servlet-mapping>>
+
 </web-app>

@@ -10,11 +10,14 @@
 <% User user=(User) request.getAttribute("user");%>
 
 <h1>User Info</h1>
+<%
+User user=(User)request.getAttribute("user");
+%>
 <table>
-    <tr><td>Username:</td><td><%=request.getAttribute("username")%></td></tr>
-    <tr><td>Password:</td><td><%=request.getAttribute("password")%></td></tr>
-    <tr><td>email:</td><td><%=request.getAttribute("email")%></td></tr>
-    <tr><td>Gender:</td><td><%=request.getAttribute("gender")%></td></tr>
-    <tr><td>Birth Date:</td><td><%=request.getAttribute("birthdate")%></td></tr>
+    <tr><td>Username:</td><td><%=user.getUsername()%></td></tr>
+    <tr><td>Password:</td><td><%=user.getPassword()%></td></tr>
+    <tr><td>email:</td><td><%=user.getEmail()%></td></tr>
+    <tr><td>Gender:</td><td><%=user.getGender()%></td></tr>
+    <tr><td>Birth Date:</td><td><%=user.getBirthDate()%></td></tr>
 </table>
 <%@include file="footer.jsp"%>
