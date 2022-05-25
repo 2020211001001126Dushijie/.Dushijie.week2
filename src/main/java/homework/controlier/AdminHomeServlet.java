@@ -24,12 +24,12 @@ public class AdminHomeServlet extends HomeServlet {
                 //have session but it's not admin user
                 session.invalidate();// kill session
                 request.setAttribute("message", "Unauthorized Access admin module!!!");
-                request.getRequestDispatcher("../WEB-INF/views/login.jsp").forward(request, response);
+                request.getRequestDispatcher("../WEB-INF/views/Logins.jsp").forward(request, response);
             }
         }else {
             // don't have session or user is null
             request.setAttribute("message", "Please login as admin!!!");
-            request.getRequestDispatcher("../WEB-INF/views/login.jsp").forward(request, response);
+            request.getRequestDispatcher("../WEB-INF/views/Logins.jsp").forward(request, response);
         }
 
     }

@@ -40,7 +40,7 @@ public class login extends HttpServlet{
         @Override
         protected void doGet(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException{
             //login-request is get
-            request.getRequestDispatcher("WEB-INF/login.jsp").forward(request,response);
+            request.getRequestDispatcher("WEB-INF/Logins.jsp").forward(request,response);
         }
 
         @Override
@@ -68,7 +68,7 @@ public class login extends HttpServlet{
                    HttpSession session=request.getSession();
                    System.out.println("session id---"+session.getId());
                    session.setMaxInactiveInterval(10);
-                   //week 8--change request to session-so we can get session in many jsp page(login.jsp and header.jsp)
+                   //week 8--change request to session-so we can get session in many jsp page(Logins.jsp and header.jsp)
 
                    //Cookie c=new Cookie("sessionid",""+user.getId());
                    //c.setMaxAge(10*60);
@@ -77,7 +77,7 @@ public class login extends HttpServlet{
                    request.getRequestDispatcher("WEB-INF/views/userinfor.jsp").forward(request,response);
                }else{
                    request.setAttribute("message","Username or Password Error!!!");
-                   request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request,response);
+                   request.getRequestDispatcher("WEB-INF/views/Logins.jsp").forward(request,response);
                }
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -105,7 +105,7 @@ public class login extends HttpServlet{
                 }else{
                     //  out.print("Login Error!!! <br>"); 删除
                     request.setAttribute("message","Username or Password Error!!!");
-                    request.getRequestDispatcher("login.jsp").forward(request,response);
+                    request.getRequestDispatcher("Logins.jsp").forward(request,response);
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
