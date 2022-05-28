@@ -64,7 +64,7 @@
         </welcome-file-list>
         <filter>
         <filter-name>HelloFilter</filter-name>
-        <filter-class>com.Youjiahao.filter.HelloFilter</filter-class>
+        <filter-class>homework.HelloFilter</filter-class>
         </filter>
         <filter-mapping>
         <filter-name>HelloFilter</filter-name>
@@ -72,7 +72,7 @@
         </filter-mapping>
         <filter>
         <filter-name>LoggerFilter</filter-name>
-        <filter-class>com.Youjiahao.filter.LoggerFilter</filter-class>
+        <filter-class>homework.LoggerFilter</filter-class>
         </filter>
         <filter-mapping>
         <filter-name>LoggerFilter</filter-name>
@@ -80,7 +80,7 @@
         </filter-mapping>
         <filter>
         <filter-name>AuthFilter</filter-name>
-        <filter-class>com.Youjiahao.filter.AuthFilter</filter-class>
+        <filter-class>homework.AuthFilter</filter-class>
         </filter>
         <filter-mapping>
         <filter-name>AuthFilter</filter-name>
