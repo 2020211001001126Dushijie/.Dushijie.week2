@@ -51,7 +51,7 @@ public class UpdateServlet extends HttpServlet {
         if (num != 0){
             javax.servlet.http.HttpSession session = (HttpSession) request.getSession();
             session.setAttribute("user", user);
-            request.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(request, response);
+            request.getRequestDispatcher("accountDetails").forward(request, response);
         }else {
             request.setAttribute("message", "Update fail!");
             request.getRequestDispatcher("WEB-INF/views/updateUser.jsp").forward(request, response);

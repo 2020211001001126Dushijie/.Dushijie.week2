@@ -1,7 +1,8 @@
-package homework.filter;
+package homework.Lab1.filter;
+
+import jakarta.servlet.annotation.WebFilter;
 
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 //2 way of mapping filter to servlet
 //way 1-use web.xml
