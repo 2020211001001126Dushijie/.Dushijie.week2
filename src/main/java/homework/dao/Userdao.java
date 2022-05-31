@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Userdao implements com.dabing.dao.IUserDao {
+public class Userdao implements homework.dao.IUserDao {
     @Override
     public boolean saveUser(Connection con, User user) throws SQLException {
         String sql="insert into usertable values(?,?,?,?,?,?)";

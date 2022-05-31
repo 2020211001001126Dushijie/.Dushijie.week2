@@ -1,6 +1,5 @@
-package com.Youjiahao.controlier;
+package homework.controlier;
 
-import homework.controlier.HomeServlet;
 import homework.modle.User;
 import jakarta.servlet.annotation.WebServlet;
 

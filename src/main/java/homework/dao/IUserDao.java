@@ -1,4 +1,4 @@
-package com.dabing.dao;
+package homework.dao;
 
 import homework.modle.User;
 
